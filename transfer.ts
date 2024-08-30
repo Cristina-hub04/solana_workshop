@@ -21,7 +21,7 @@ const receiver = new PublicKey("GrLFLYpS96pfGTdyEn6HbPLupsJTZgD4cqs4sGGKVQg");
 
 const balance = await connection.getBalance(receiver);
 
-console.log(Andrei balance ${balance / LAMPORTS_PER_SOL} SOL);
+console.log(`Andrei balance ${balance / LAMPORTS_PER_SOL} SOL`);
 
 const transaction = new Transaction();
 
@@ -40,4 +40,4 @@ const signature = await sendAndConfirmTransaction(connection, transaction, [
     sender,
 ]);
 
-console.log(Transaction confirmed. Signature: ${signature});
+console.log(`Transaction confirmed. Signature: ${signature}`);
