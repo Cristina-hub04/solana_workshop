@@ -13,7 +13,6 @@ console.log(
     `🔑 Loaded our keypair securely, using an env file! Our public key is: ${user.publicKey}`
 );
 
-// Substitute in a recipient from addresses.ts
 const RECIPIENT_ADDRESS = "AjS5sjFaMhXEJgJRQnGo5nRr55YoKRzmVixGV5kF44Ee";
 const TOKEN_MINT_ADDRESS = "Do8mtfAjpJjUeZXw5yV2vK4kb3bJSvdn8XrMJr9uO6dwb4";
 const recipient = new PublicKey(RECIPIENT_ADDRESS);
@@ -23,7 +22,7 @@ const tokenAccount = await getOrCreateAssociatedTokenAccount(
     connection,
     user,
     tokenMintAccount,
-    recipient,  /\<recipient\>     [3/3]
+    recipient,
 );
 
 const link = getExplorerLink(
